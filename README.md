@@ -1,4 +1,4 @@
-# Open-Souce Research Project in Python: A Template
+# Open-Source Research Project in Python: A Template
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
@@ -150,12 +150,12 @@ Notice about the development:
 
   * Run `pip install poetry` to finish the installation of poetry.
 
-  * Create `conda environment` with specified python version
+  * Create `conda environment` with a specified Python version
 
   * Run `poetry install` to install required dependencies.
 
 ## ❤️ Contribution
 
-I welcome all kinds of contribution, e.g. adding more tools, better practices, discussions on trade-offs.
+I welcome all kinds of contributions, e.g. adding more tools, better practices, and discussion on trade-offs.
 
 #### 
