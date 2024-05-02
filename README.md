@@ -150,12 +150,12 @@ Notice about the development:
 
   * Run `pip install poetry` to finish the installation of poetry.
 
-  * Create `conda environment` with specified python version
+  * Create `conda environment` with a specified Python version
 
   * Run `poetry install` to install required dependencies.
 
 ## ❤️ Contribution
 
-I welcome all kinds of contribution, e.g. adding more tools, better practices, discussions on trade-offs.
+I welcome all kinds of contributions, e.g. adding more tools, better practices, and discussion on trade-offs.
 
 #### 
