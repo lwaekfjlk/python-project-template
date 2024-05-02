@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "research-town"
+name = "python-project-template"
 version = "0.0.1"
-description = "A multi-agent framework for research pipeline."
+description = "A template for python-based research project"
 authors = ["Haofei Yu <yuhaofei44@gmail.com>"]
 license = "Apache 2.0 License"
 readme = "README.md"

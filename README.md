@@ -2,7 +2,7 @@
 > [!NOTE]
 > This repo is under construction. Any contribution is welcome.
 
-#### ✨Motivation
+### ✨ Motivation
 
 To ensure high standards in engineering projects, we offer a standardized template specifically designed for open-source Python research projects. This template is an excellent choice if you:
 
@@ -11,24 +11,59 @@ To ensure high standards in engineering projects, we offer a standardized templa
 3. Seek to make rapid iterations with assurance that small code modifications won’t disrupt the overall project.
 4. Wish to reduce the frequency of frustrating runtime errors during experiments.
 
-#### 🔨Development Workflow 
+### 🔨 Development Workflow 
 
 Here's a clearer and more straightforward guideline of the steps for working with your codebase. If working in a small group or working on a simple project, some of the steps can be skipped.
 
-1. **Create Issue**: Before starting, open a new issue in the repository detailing what you plan to implement. Assign the issue to yourself.
-2. **Sync Repo**: Update your local repository to match the latest version of the remote repository.
-3. **Create Branch**: Create a new branch for your task. Name it appropriately based on the type of task, such as `feature/feature-name`, `bug/bug-name`, or `exp/exp-name`.
-4. **Implement Code**: Work on your task and make necessary changes to the codebase.
-5. **Test Locally**: Run tests using tools like mypy, pytest, and pre-commit. Ensure all tests pass before proceeding.
-6. **Change Commit**: Add and commit your changes to the branch, then push the branch to the repository.
-7. **Create PR**: Open a Pull Request (PR) for the branch you've pushed.
-8. **Link PR to Issue**: In your PR, include "Closes #ISSUE_NUM" to link it to the original issue.
-9. **Pass Continuous Integration**: Ensure all GitHub Actions checks pass. If they fail, revise your code based on the errors reported.
-10. **Review PR Checklist**: Verify that all items in the PR checklist are completed, such as updating documentation or adding package requirements.
-11. **Ask for Code Review**: Invite a colleague to review your PR. One approved, Use the "Squash and Merge" option to merge your PR, ensuring a clean commit history.
-13. **Troubleshooting**: If you break down the commit history or main branch, contact the repository owner for assistance with `rebase` or other needed actions.
+1. **Create Issue**
 
-#### 💼Template Structure
+   Before starting, open a new issue in the repository detailing what you plan to implement. Assign the issue to yourself.
+
+2. **Sync Repo** 
+
+   Update your local repository to match the latest version of the remote repository.
+
+3. **Create Branch** 
+
+   Create a new branch for your task. Name it appropriately based on the type of task, such as `feature/feature-name`, `bug/bug-name`, or `exp/exp-name`.
+
+4. **Implement Code** 
+
+   Work on your task and make necessary changes to the codebase.
+
+5. **Test Locally** 
+
+   Run tests using tools like mypy, pytest, and pre-commit. Ensure all tests pass before proceeding.
+
+6. **Change Commit** 
+
+   Add and commit your changes to the branch, then push the branch to the repository.
+
+7. **Create PR** 
+
+   Open a Pull Request (PR) for the branch you've pushed.
+
+8. **Link PR to Issue** 
+
+   In your PR, include "Closes #ISSUE_NUM" to link it to the original issue.
+
+9. **Pass Continuous Integration** 
+
+   Ensure all GitHub Actions checks pass. If they fail, revise your code based on the errors reported.
+
+10. **Review PR Checklist** 
+
+    Verify that all items in the PR checklist are completed, such as updating documentation or adding package requirements.
+
+11. **Ask for Code Review** 
+
+    Invite a colleague to review your PR. One approved, Use the "Squash and Merge" option to merge your PR, ensuring a clean commit history.
+
+12. **Troubleshooting** 
+
+    If you break down the commit history or main branch, contact the repository owner for assistance with `rebase` or other needed actions.
+
+### 💼 Template Structure
 
 The current project template supports the final package release of our codebase.
 
@@ -47,7 +82,7 @@ Template/
 ├── pyproject.toml            # Project metadata and tool configurations
 ```
 
-#### ❓Issue & Pull Request
+###❓ Issue & Pull Request
 
 An issue typically describes a new feature, improving an old feature, or launching a group of experiments.
 
@@ -61,7 +96,7 @@ Notice about the development:
 4. When merging one PR, make sure using `squash and merge` instead of `merge a pull request`.
 5. Avoid making any direct commit to the `main` branch and try to avoid any `--force` push to any branch unless you are pretty sure about that.
 
-#### 👷Type Checking
+###👷 Type Checking
 
 * Tools
 
@@ -72,7 +107,7 @@ Notice about the development:
 * Guidelines
   * Run `mypy --strict ./` under the root of the current repo to test the static type.
 
-#### 🏅️Unit Testing
+###🏅️ Unit Testing
 
 * Tools
   * testing code components based on testing function (`pytest`)
@@ -80,7 +115,7 @@ Notice about the development:
 * Guidelines
   * Run `pytest` under the root of the current repo to check unit test results.
 
-#### 🪝Pre-commit Hook
+###🪝 Pre-commit Hook
 
 * Tools
 
@@ -98,7 +133,7 @@ Notice about the development:
 
   * Run `pre-commit run --all-files ` to automatically execute all hooked testing.
 
-#### 🧑‍💼Dependency Management
+###🧑‍💼 Dependency Management
 
 * Tools
   * We utilize `poetry` to support the dependency requirements. Dependency for different usage of the repo can be defined separately in `pyproject.toml`.
@@ -111,7 +146,7 @@ Notice about the development:
 
   * Run `poetry install` to install required dependencies.
 
-#### ❤️Contribution
+### ❤️ Contribution
 
 I welcome all kinds of contribution, e.g. adding more tools, better practices, discussions on trade-offs.
 
