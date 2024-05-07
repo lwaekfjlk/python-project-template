@@ -41,3 +41,10 @@ plugins = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = "test_*.py"
+
+[tool.codespell]
+ignore-words-list = "dout, te, indicies"
+
+[tool.isort]
+use_parentheses = true
+skip_gitignore = true
