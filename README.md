@@ -1,5 +1,6 @@
 # Open-Source Research Project in Python: A Template
 
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3109/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
@@ -134,6 +135,8 @@ Notice about the development:
   * ipynb output clear (`nbstripout`)
 
   * code bug checking (`ruff`)
+ 
+  * code spell checking (`codespell`)
 
 * Guidelines
 
