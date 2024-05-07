@@ -1,4 +1,4 @@
-name: ruff
+name: codespell
 
 on:
   # Trigger the workflow on push or pull request,
@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install ruff==0.1.5 tomli==2.0.1
-    - name: Analysing the code with ruff
+        pip install codespell==2.2.6
+    - name: Spelling check with codespell
       run: |
-        ruff check .
+        codespell --toml pyproject.toml
