@@ -20,7 +20,7 @@ To ensure high standards in engineering projects, we offer a standardized templa
 3. Seek to make rapid iterations with assurance that small code modifications won’t disrupt the overall project.
 4. Wish to reduce the frequency of frustrating runtime errors during experiments.
 
-## 🔨 Continous Integration Workflow
+## 🔨 Continuous Integration (CI) Workflow
 
 Here's a clearer and more straightforward guideline of the steps for working with your codebase. If working in a small group or working on a simple project, some of the steps can be skipped.
 
