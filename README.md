@@ -20,7 +20,7 @@ To ensure high standards in engineering projects, we offer a standardized templa
 3. Seek to make rapid iterations with assurance that small code modifications won’t disrupt the overall project.
 4. Wish to reduce the frequency of frustrating runtime errors during experiments.
 
-## 🔨 Development Workflow
+## 🔨 Continous Integration Workflow
 
 Here's a clearer and more straightforward guideline of the steps for working with your codebase. If working in a small group or working on a simple project, some of the steps can be skipped.
 
@@ -82,7 +82,7 @@ Template/
 ├── .github/                  # Contains GitHub related files like workflows
 ├── docs/                     # Documentation for the project
 ├── src/            				  # Main package directory
-├── stubs/                    # Type stubs for static typing
+├── stubs/                    # Type stubs for static typing (optional)
 ├── tests/                    # Test scripts and resources
 │
 ├── .gitignore                # Specifies untracked files to ignore
