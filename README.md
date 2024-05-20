@@ -81,8 +81,8 @@ Template/
 │
 ├── .github/                  # Contains GitHub related files like workflows
 ├── docs/                     # Documentation for the project
-├── src/            				  # Main package directory
-├── stubs/                    # Type stubs for static typing (optional)
+├── src/                      # Main package directory
+├── stubs/                    # Type stubs for static typing (for mypy strict mode)
 ├── tests/                    # Test scripts and resources
 │
 ├── .gitignore                # Specifies untracked files to ignore
