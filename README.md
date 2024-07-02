@@ -9,7 +9,7 @@
 [![Github Action](https://github.com/lwaekfjlk/python-project-template/actions/workflows/pre-commit.yml/badge.svg?branch=main)]()
 
 > [!NOTE]
-> This repo is under construction. Any contribution is welcome.
+> This repo is continously updating with more tools. Any contribution is welcome.
 
 ## ✨ Motivation
 
@@ -93,9 +93,9 @@ Template/
 
 ## ❓ Issue & Pull Request
 
-An issue typically describes a new feature, improving an old feature, or launching a group of experiments.
+An issue typically describes a new feature (`feature`), fixing an old bug (`bug`), launching a group of experiments (`exp`), or refactoring part of the code (`refactor`). Using different issue templates for different issues.
 
-A PR typically implements the content in one issue.
+A PR typically implements the content mentioned in one issue.
 
 Notice about the development:
 
@@ -124,25 +124,31 @@ Notice about the development:
 * Guidelines
   * Run `pytest` under the root of the current repo to check unit test results.
 
+## 🧐 Code Spell Checking
+
+* Tools
+  * code spell checking (`codespell`)
+
+* Guidelines
+  * Commonly need to ignore part of the files in the repository like `/data`.
+
 ## 🪝 Pre-commit Hook
 
 * Tools
 
-  * code formatting (`black` and `prettier`)
+  * code formatting (`prettier`)
 
   * import package sorting (`isort`)
 
   * ipynb output clear (`nbstripout`)
 
-  * code bug checking (`ruff`)
-
-  * code spell checking (`codespell`)
+  * code bug checking and formatting (`ruff`)
 
 * Guidelines
 
   * Run `python -m pip install pre-commit` to install `pre-commit`
 
-  * Run `pre-commit run --all-files ` to automatically execute all hooked testing.
+  * Run `pre-commit install` to allow hooking pre-commit with any `git commit` commands.
 
 ## 🧑‍💼 Dependency Management
 
@@ -160,5 +166,3 @@ Notice about the development:
 ## ❤️ Contribution
 
 I welcome all kinds of contributions, e.g. adding more tools, better practices, and discussion on trade-offs.
-
-####
