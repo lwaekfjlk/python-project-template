@@ -135,7 +135,7 @@ Notice about the development:
   * ipynb output clear (`nbstripout`)
 
   * code bug checking (`ruff`)
- 
+
   * code spell checking (`codespell`)
 
 * Guidelines
