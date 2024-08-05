@@ -12,7 +12,7 @@ repos:
     -   id: prettier
         types_or: [html]
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.5.1  # Ruff version
+  rev: v0.5.6  # Ruff version
   hooks:
     - id: ruff
       types_or: [python, pyi, jupyter]
