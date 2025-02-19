@@ -5,27 +5,42 @@ description = "A template for python-based research project"
 authors = ["Haofei Yu <yuhaofei44@gmail.com>"]
 license = "Apache 2.0 License"
 readme = "README.md"
-
+packages = [{include = "your_package_name"}]  # Replace with your actual package name
+repository = "https://github.com/yourusername/python-project-template"
+keywords = ["template", "python", "research"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9, <3.12"
 mypy = "^1.8.0"
-beartype = "*"
+beartype = "^0.17.1"  # Specify version for better reproducibility
 pydantic = "^2.8.2"
 
-
 [tool.poetry.group.dev.dependencies]
-pre-commit = "*"
-nbmake = "*"
-types-setuptools = "*"
+pre-commit = "^3.6.0"
+nbmake = "^1.5.0"
+types-setuptools = "^69.0.0.0"
+ruff = "^0.3.0"
+black = "^24.1.1"
+isort = "^5.13.2"
+commitizen = "^3.14.1"
 
 [tool.poetry.group.test.dependencies]
-pytest = "*"
-pytest-asyncio = "*"
-
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.5"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.12.0"
+hypothesis = "^6.98.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.9.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
@@ -34,66 +49,97 @@ check_untyped_defs = true
 follow_imports = "normal"
 strict = true
 plugins = ["pydantic.mypy"]
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+strict_optional = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = "test_*.py"
+addopts = "-v --cov=your_package_name --cov-report=term-missing"
+markers = [
+    "slow: marks tests as slow",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["your_package_name"]
+omit = ["tests/*", "**/__init__.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "raise ImportError",
+    "except ImportError:",
+]
 
 [tool.codespell]
 ignore-words-list = "dout, te, indicies, astroid"
-skip = ["data"]
+skip = ["data", ".git", "*.pyc", "*.csv", "*.json"]
+quiet-level = 3
 
 [tool.isort]
 profile = "black"
-use_parentheses = true
-skip_gitignore = true
+line_length = 88
+known_first_party = ["your_package_name"]
+known_third_party = ["pytest", "pydantic"]
 multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
-line_length = 88
 
 [tool.black]
 line-length = 88
-target-version = ['py37', 'py38', 'py39', 'py310']
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+^/foo.py  # exclude a file named foo.py in the root of the project
+'''
 
 [tool.ruff]
 line-length = 88
 fix = true
 target-version = "py310"
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP",  # pyupgrade
+]
+ignore = ["E203", "E266", "E501"]
 
 [tool.ruff.format]
 quote-style = "single"
 indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
-[tool.mypy-arxiv]
-ignore_missing_imports = true
+[tool.ruff.mccabe]
+max-complexity = 10
 
-[tool.mypy-transformers]
-ignore_missing_imports = true
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["S101"]
 
-[tool.mypy-litellm]
-ignore_missing_imports = true
-
-[tool.pydoc-markdown]
-loaders = [
-  { type = "python", search_path = ["."] }
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "v$version"
+bump_message = "bump: version $current_version → $new_version"
+version_files = [
+    "pyproject.toml:version",
+    "your_package_name/__init__.py:__version__"
 ]
-
-[[tool.pydoc-markdown.processors]]
-type = "filter"
-skip_empty_modules = true
-
-[[tool.pydoc-markdown.processors]]
-type = "smart"
-
-[[tool.pydoc-markdown.processors]]
-type = "crossref"
-
-[tool.pydoc-markdown.renderer]
-type = "docusaurus"
-docs_base_path = "docs"
-relative_output_path = ""
-sidebar_top_level_label = "Documentation"
 
 [[tool.poetry.source]]
 name = "torchcpu"
