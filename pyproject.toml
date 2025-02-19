@@ -8,7 +8,7 @@ readme = "README.md"
 
 
 [tool.poetry.dependencies]
-python = ">=3.8, <3.12"
+python = ">=3.9, <3.12"
 mypy = "^1.8.0"
 beartype = "*"
 pydantic = "^2.8.2"
@@ -31,11 +31,9 @@ build-backend = "poetry.core.masonry.api"
 [tool.mypy]
 ignore_missing_imports = true
 check_untyped_defs = true
-follow_imports = "skip"
+follow_imports = "normal"
 strict = true
-plugins = [
-    "pydantic.mypy"
-]
+plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -43,6 +41,7 @@ python_files = "test_*.py"
 
 [tool.codespell]
 ignore-words-list = "dout, te, indicies, astroid"
+skip = ["data"]
 
 [tool.isort]
 profile = "black"
@@ -51,4 +50,52 @@ skip_gitignore = true
 multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
-line_length = 70
+line_length = 88
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310']
+
+[tool.ruff]
+line-length = 88
+fix = true
+target-version = "py310"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+
+[tool.mypy-arxiv]
+ignore_missing_imports = true
+
+[tool.mypy-transformers]
+ignore_missing_imports = true
+
+[tool.mypy-litellm]
+ignore_missing_imports = true
+
+[tool.pydoc-markdown]
+loaders = [
+  { type = "python", search_path = ["."] }
+]
+
+[[tool.pydoc-markdown.processors]]
+type = "filter"
+skip_empty_modules = true
+
+[[tool.pydoc-markdown.processors]]
+type = "smart"
+
+[[tool.pydoc-markdown.processors]]
+type = "crossref"
+
+[tool.pydoc-markdown.renderer]
+type = "docusaurus"
+docs_base_path = "docs"
+relative_output_path = ""
+sidebar_top_level_label = "Documentation"
+
+[[tool.poetry.source]]
+name = "torchcpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
