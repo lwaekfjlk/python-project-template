@@ -5,7 +5,6 @@ description = "A template for python-based research project"
 authors = ["Haofei Yu <yuhaofei44@gmail.com>"]
 license = "Apache 2.0 License"
 readme = "README.md"
-packages = [{include = "your_package_name"}]  # Replace with your actual package name
 repository = "https://github.com/yourusername/python-project-template"
 keywords = ["template", "python", "research"]
 classifiers = [
