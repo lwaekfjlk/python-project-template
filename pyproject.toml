@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.9, <3.12"
 mypy = "^1.8.0"
-beartype = "^0.17.1"  # Specify version for better reproducibility
+beartype = "^0.17.1"
 pydantic = "^2.8.2"
 
 [tool.poetry.group.dev.dependencies]
@@ -17,10 +17,8 @@ pre-commit = "^3.6.0"
 nbmake = "^1.5.0"
 types-setuptools = "^69.0.0.0"
 ruff = "^0.3.0"
-black = "^24.1.1"
-isort = "^5.13.2"
 commitizen = "^3.14.1"
-pydantic = "^2.8.2"
+# Removed black and isort since we're using ruff
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.0"
@@ -49,14 +47,14 @@ disallow_incomplete_defs = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = "test_*.py"
-addopts = "-v --cov=your_package_name --cov-report=term-missing"
+addopts = "-v --cov=python_project_template --cov-report=term-missing"
 markers = [
     "slow: marks tests as slow",
     "integration: marks tests as integration tests",
 ]
 
 [tool.coverage.run]
-source = ["your_package_name"]
+source = ["python_project_template"]
 omit = ["tests/*", "**/__init__.py"]
 
 [tool.coverage.report]
@@ -73,25 +71,6 @@ exclude_lines = [
 ignore-words-list = "dout, te, indicies, astroid"
 skip = ["data", ".git", "*.pyc", "*.csv", "*.json"]
 quiet-level = 3
-
-[tool.isort]
-profile = "black"
-line_length = 88
-known_first_party = ["your_package_name"]
-known_third_party = ["pytest", "pydantic"]
-multi_line_output = 3
-include_trailing_comma = true
-force_grid_wrap = 0
-
-[tool.black]
-line-length = 88
-target-version = ['py39', 'py310', 'py311']
-include = '\.pyi?$'
-extend-exclude = '''
-# A regex preceded with ^/ will apply only to files and directories
-# in the root of the project.
-^/foo.py  # exclude a file named foo.py in the root of the project
-'''
 
 [tool.ruff]
 line-length = 88
@@ -118,6 +97,10 @@ line-ending = "auto"
 [tool.ruff.lint.mccabe]
 max-complexity = 10
 
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["S101"]
+
 [tool.commitizen]
 name = "cz_conventional_commits"
 version = "0.0.1"
@@ -125,7 +108,7 @@ tag_format = "v$version"
 bump_message = "bump: version $current_version → $new_version"
 version_files = [
     "pyproject.toml:version",
-    "your_package_name/__init__.py:__version__"
+    "python_project_template/__init__.py:__version__"
 ]
 
 [[tool.poetry.source]]
