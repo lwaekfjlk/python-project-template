@@ -168,8 +168,14 @@ Notice about the development:
 
 I welcome all kinds of contributions, e.g. adding more tools, better practices, and discussion on trade-offs.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ####
+||||||| 7336538
+
+#### 
+=======
+>>>>>>> 2e5d11a38c629e9fa30565b63ef1fb8e97533eff
 ||||||| 7336538
 
 #### 
