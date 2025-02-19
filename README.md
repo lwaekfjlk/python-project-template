@@ -5,11 +5,10 @@
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 [![bear-ified](https://raw.githubusercontent.com/beartype/beartype-assets/main/badge/bear-ified.svg)](https://beartype.readthedocs.io)
-[![Github Action](https://github.com/lwaekfjlk/python-project-template/actions/workflows/tests.yml/badge.svg?branch=main)]()
-[![Github Action](https://github.com/lwaekfjlk/python-project-template/actions/workflows/pre-commit.yml/badge.svg?branch=main)]()
+[![Github Action](https://github.com/lwaekfjlk/python-project-template/actions/workflows/pytest.yml/badge.svg?branch=main)]()
 
 > [!NOTE]
-> This repo is under construction. Any contribution is welcome.
+> This repo is continously updating with more tools. Any contribution is welcome.
 
 ## ✨ Motivation
 
@@ -93,9 +92,9 @@ Template/
 
 ## ❓ Issue & Pull Request
 
-An issue typically describes a new feature, improving an old feature, or launching a group of experiments.
+An issue typically describes a new feature (`feature`), fixing an old bug (`bug`), launching a group of experiments (`exp`), or refactoring part of the code (`refactor`). Using different issue templates for different issues.
 
-A PR typically implements the content in one issue.
+A PR typically implements the content mentioned in one issue.
 
 Notice about the development:
 
@@ -124,11 +123,19 @@ Notice about the development:
 * Guidelines
   * Run `pytest` under the root of the current repo to check unit test results.
 
+## 🧐 Code Spell Checking
+
+* Tools
+  * code spell checking (`codespell`)
+
+* Guidelines
+  * Commonly need to ignore part of the files in the repository like `/data`.
+
 ## 🪝 Pre-commit Hook
 
 * Tools
 
-  * code formatting (`black` and `prettier`)
+  * code formatting (`prettier`)
 
   * import package sorting (`isort`)
 
@@ -142,7 +149,7 @@ Notice about the development:
 
   * Run `python -m pip install pre-commit` to install `pre-commit`
 
-  * Run `pre-commit run --all-files ` to automatically execute all hooked testing.
+  * Run `pre-commit install` to allow hooking pre-commit with any `git commit` commands.
 
 ## 🧑‍💼 Dependency Management
 
@@ -160,5 +167,11 @@ Notice about the development:
 ## ❤️ Contribution
 
 I welcome all kinds of contributions, e.g. adding more tools, better practices, and discussion on trade-offs.
+<<<<<<< HEAD
 
 ####
+||||||| 7336538
+
+#### 
+=======
+>>>>>>> 2e5d11a38c629e9fa30565b63ef1fb8e97533eff
