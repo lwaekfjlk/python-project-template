@@ -5,15 +5,8 @@ description = "A template for python-based research project"
 authors = ["Haofei Yu <yuhaofei44@gmail.com>"]
 license = "Apache 2.0 License"
 readme = "README.md"
-repository = "https://github.com/yourusername/python-project-template"
-keywords = ["template", "python", "research"]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: Apache Software License",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
+packages = [
+    { include = "python_project_template", from = "src" }
 ]
 
 [tool.poetry.dependencies]
