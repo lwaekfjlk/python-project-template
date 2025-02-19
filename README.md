@@ -146,10 +146,6 @@ Notice about the development:
   - code bug checking (`ruff`)
 
   - code spell checking (`codespell`)
-    ||||||| 7336538
-  - # code bug checking (`ruff`)
-  - code bug checking and formatting (`ruff`)
-    > > > > > > > 2e5d11a38c629e9fa30565b63ef1fb8e97533eff
 
 - Guidelines
 
