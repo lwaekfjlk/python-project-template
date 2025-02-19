@@ -142,7 +142,7 @@ Notice about the development:
   * ipynb output clear (`nbstripout`)
 
   * code bug checking (`ruff`)
- 
+
   * code spell checking (`codespell`)
 
 * Guidelines
@@ -173,11 +173,11 @@ I welcome all kinds of contributions, e.g. adding more tools, better practices, 
 ####
 ||||||| 7336538
 
-#### 
+####
 =======
 >>>>>>> 2e5d11a38c629e9fa30565b63ef1fb8e97533eff
 ||||||| 7336538
 
-#### 
+####
 =======
 >>>>>>> 2e5d11a38c629e9fa30565b63ef1fb8e97533eff
