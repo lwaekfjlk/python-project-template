@@ -145,8 +145,6 @@ Notice about the development:
 
   - code bug checking (`ruff`)
 
-  - code spell checking (`codespell`)
-
 - Guidelines
 
   - Run `python -m pip install pre-commit` to install `pre-commit`
