@@ -6,7 +6,7 @@ authors = ["Haofei Yu <yuhaofei44@gmail.com>"]
 license = "Apache 2.0 License"
 readme = "README.md"
 packages = [
-    { include = "package-name" }
+    { include = "src" }
 ]
 
 [tool.poetry.dependencies]
