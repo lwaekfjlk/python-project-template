@@ -8,7 +8,7 @@
 [![Github Action](https://github.com/lwaekfjlk/python-project-template/actions/workflows/pytest.yml/badge.svg?branch=main)]()
 
 > [!NOTE]
-> This repo is continously updating with more tools. Any contribution is welcome.
+> This repo is continuously updating with more tools. Any contribution is welcome.
 
 ## ✨ Motivation
 
@@ -106,61 +106,70 @@ Notice about the development:
 
 ## 👷 Type Checking
 
-* Tools
+- Tools
 
-  * static type checking (`mypy`)
+  - static type checking (`mypy`)
 
-  * dynamic type checking (`beartype`)
+  - dynamic type checking (`beartype`)
 
-* Guidelines
-  * Run `mypy --strict ./` under the root of the current repo to test the static type.
+- Guidelines
+  - Run `mypy --strict ./` under the root of the current repo to test the static type.
 
 ## 🏅️ Unit Testing
 
-* Tools
-  * testing code components based on testing function (`pytest`)
+- Tools
 
-* Guidelines
-  * Run `pytest` under the root of the current repo to check unit test results.
+  - testing code components based on testing function (`pytest`)
+
+- Guidelines
+  - Run `pytest` under the root of the current repo to check unit test results.
 
 ## 🧐 Code Spell Checking
 
-* Tools
-  * code spell checking (`codespell`)
+- Tools
 
-* Guidelines
-  * Commonly need to ignore part of the files in the repository like `/data`.
+  - code spell checking (`codespell`)
+
+- Guidelines
+  - Commonly need to ignore part of the files in the repository like `/data`.
 
 ## 🪝 Pre-commit Hook
 
-* Tools
+- Tools
 
-  * code formatting (`prettier`)
+  - code formatting (`prettier`)
 
-  * import package sorting (`isort`)
+  - import package sorting (`isort`)
 
-  * ipynb output clear (`nbstripout`)
+  - ipynb output clear (`nbstripout`)
 
-  * code bug checking and formatting (`ruff`)
+  - code bug checking (`ruff`)
 
-* Guidelines
+  - code spell checking (`codespell`)
+    ||||||| 7336538
+  - # code bug checking (`ruff`)
+  - code bug checking and formatting (`ruff`)
+    > > > > > > > 2e5d11a38c629e9fa30565b63ef1fb8e97533eff
 
-  * Run `python -m pip install pre-commit` to install `pre-commit`
+- Guidelines
 
-  * Run `pre-commit install` to allow hooking pre-commit with any `git commit` commands.
+  - Run `python -m pip install pre-commit` to install `pre-commit`
+
+  - Run `pre-commit install` to allow hooking pre-commit with any `git commit` commands.
 
 ## 🧑‍💼 Dependency Management
 
-* Tools
-  * We utilize `poetry` to support the dependency requirements. Dependency for different usage of the repo can be defined separately in `pyproject.toml`.
+- Tools
 
-* Guidelines
+  - We utilize `poetry` to support the dependency requirements. Dependency for different usage of the repo can be defined separately in `pyproject.toml`.
 
-  * Run `pip install poetry` to finish the installation of poetry.
+- Guidelines
 
-  * Create `conda environment` with a specified Python version
+  - Run `pip install poetry` to finish the installation of poetry.
 
-  * Run `poetry install` to install required dependencies.
+  - Create `conda environment` with a specified Python version
+
+  - Run `poetry install` to install required dependencies.
 
 ## ❤️ Contribution
 

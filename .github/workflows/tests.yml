@@ -1,21 +1,17 @@
-name: isort
-
+name: Pytest
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
+  push:
+    branches: [main]
 
 jobs:
-  isort:
+  Pytest:
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 5
       matrix:
         python-version: ["3.9", "3.10"]
+
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -24,8 +20,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install isort==5.13.2
-      - name: Run isort
+          curl -sSL https://install.python-poetry.org | python3
+          poetry install --all-extras
+      - name: Test with pytest
+        env: # Or as an environment variable
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          isort . --check-only
+          poetry run pytest
