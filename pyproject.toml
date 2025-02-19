@@ -5,9 +5,6 @@ description = "A template for python-based research project"
 authors = ["Haofei Yu <yuhaofei44@gmail.com>"]
 license = "Apache 2.0 License"
 readme = "README.md"
-packages = [
-    { include = "python_project_template", from = "src" }
-]
 
 [tool.poetry.dependencies]
 python = ">=3.9, <3.12"
